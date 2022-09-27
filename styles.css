@@ -38,6 +38,8 @@ body p {
     border-radius: 10px 0px 0px 10px;
 }
 
+
+
 @media screen and (max-width: 768px) {
     .card-one {
         border-radius: 10px 10px 0px 0px;
@@ -46,29 +48,18 @@ body p {
 }
 
 
-#card-one button {
-    color: hsl(31, 77%, 52%);
-    font-weight: bold;
-}
-
 .card-two {
     background-color: hsl(184, 100%, 22%);
 }
 
-#card-two button {
-    color: hsl(184, 100%, 22%);
-    font-weight: bolder;
-}
+
 
 .card-three {
     background-color: hsl(179, 100%, 13%);
     border-radius: 0px 10px 10px 0px;
 }
 
-#card-three button {
-    color: hsl(179, 100%, 13%);
-    font-weight: bolder;
-}
+
 
 @media screen and (max-width: 768px) {
     .card-three {
@@ -78,9 +69,25 @@ body p {
 
 }
 
-#card-one button {
+
+.button-luxury{
+    color: hsl(179, 100%, 13%);
+}
+
+.button-suv{
+    color: hsl(184, 100%, 22%)
+}
+
+.button-sedans{
     color: hsl(31, 77%, 52%);
 }
+
+.white-text:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+
+
 
 .styles-button {
     width: 120px;
@@ -88,15 +95,17 @@ body p {
     margin-top: 20px;
     border-radius: 50px;
     background-color: hsl(0, 0%, 95%);
-    color: rgba(0, 0, 0, );
+    font-weight: bolder;
     border: none;
 }
 
 .styles-button:hover {
+    /* poner el fondo transparente y la letra en blanco */
     background-color: transparent;
-    color: hsl(0, 0%, 95%);
+
     border: 1px solid hsl(0, 0%, 95%);
     cursor: pointer;
+
 }
 
 
@@ -125,7 +134,7 @@ body p {
     height: 100%;
     padding: 50px;
     display: grid;
-    grid-template-rows: 70px 70px 170px;
+    grid-template-rows: 70px 70px 170px 10px;
     grid-template-columns: auto;
     grid-template-areas:
         'img'
