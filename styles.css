@@ -9,16 +9,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+    background-color: #ccc;
 }
-
-@media screen and (max-width: 768px) {
-    body {
-        height: 100%;
-    }
-}
-    
 
 body h1 {
     font-family: 'Big shoulders display', sans-serif;
@@ -27,134 +19,155 @@ body h1 {
 
 body p {
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
     color: hsla(0, 0%, 100%, 0.75);
 }
 
+.image-svg{
+    width: 50px;
+}
 
-
-.card-one {
+.card-one{
     background-color: hsl(31, 77%, 52%);
-    border-radius: 10px 0px 0px 10px;
 }
-
-
-
-@media screen and (max-width: 768px) {
-    .card-one {
-        border-radius: 10px 10px 0px 0px;
-        margin-top: 60px;
-    }
-}
-
-
-.card-two {
+.card-two{
     background-color: hsl(184, 100%, 22%);
 }
-
-
-
-.card-three {
+.card-three{
     background-color: hsl(179, 100%, 13%);
-    border-radius: 0px 10px 10px 0px;
 }
 
-
-
-@media screen and (max-width: 768px) {
-    .card-three {
-        border-radius: 0px 0px 10px 10px;
-        margin-bottom: 40px;
-    }
-
+.card-container button{
+    background-color:  hsl(0, 0%, 95%);
+    border: none;
+    width: 140px;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
 }
-
-
-.button-luxury{
-    color: hsl(179, 100%, 13%);
-}
-
-.button-suv{
-    color: hsl(184, 100%, 22%)
-}
-
-.button-sedans{
+.card-container:first-child button{
     color: hsl(31, 77%, 52%);
 }
 
-.white-text:hover {
+.card-container:nth-child(2) button{
+    color: hsl(184, 100%, 22%);
+}
+
+.card-container:last-child button{
+    color:hsl(179, 100%, 13%)        
+}
+
+/* Hover button option */
+.card-container button:hover{
     color: hsl(0, 0%, 95%);
-}
-
-
-
-
-.styles-button {
-    width: 120px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 50px;
-    background-color: hsl(0, 0%, 95%);
-    font-weight: bolder;
-    border: none;
-}
-
-.styles-button:hover {
-    /* poner el fondo transparente y la letra en blanco */
-    background-color: transparent;
-
     border: 1px solid hsl(0, 0%, 95%);
-    cursor: pointer;
+}
 
+.card-container:first-child button:hover{
+    background-color: hsl(31, 77%, 52%);
+}
+
+.card-container:nth-child(2) button:hover{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card-container:nth-child(3) button:hover{
+    background-color: hsl(179, 100%, 13%);
 }
 
 
-.global-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 95vh;
-    height: 47vh;
-}
-
-@media screen and (max-width: 600px) {
-    .global-container {
-        width: 80%;
-        height: 80%;
+@media screen and (max-width: 766px) {
+    .card-container{
+        width: 80vw;
+        height: 400px;
         margin: 0 auto;
-        margin-bottom: 40px;
-        display: grid;
-        grid-template-columns: 1fr;
+        padding: 2.3rem;
+        display: flex;
+        line-height: 1.5;
+        font-size: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-container:first-child{
+        margin-top: 60px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-container:last-child{
+        margin-bottom: 60px;
+        border-radius: 0 0 10px 10px;
     }
 }
 
-.card-container {
-    width: 100%;
-    height: 100%;
-    padding: 50px;
-    display: grid;
-    grid-template-rows: 70px 70px 170px 10px;
-    grid-template-columns: auto;
-    grid-template-areas:
-        'img'
-        'h1'
-        'p'
-        'button'
+@media screen and (min-width: 767px) and (max-width: 1022px) {
+    .card-container{
+        width: 50vw;
+        height: 400px;
+        margin: 0 auto;
+        padding: 2.3rem;
+        display: flex;
+        line-height: 1.5;
+        font-size: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-container:first-child{
+        margin-top: 60px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-container:last-child{
+        margin-bottom: 60px;
+        border-radius: 0 0 10px 10px;
+    }
 }
 
-@media screen and (max-width: 600px) {
-    .card-container {
+
+@media screen and (min-width: 1023px) {
+
+    .global-container{
+        display:flex;
+        max-width: 1375px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .card-container{
+        width: 300px;
+        height: 450px;
+        padding: 3em;
+        line-height: 1.5;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .image-svg{
+        width: 60px;
+
+    }
+    .card-container h1{
+        font-size: 2em;
+    }
+
+    .card-container h1, p {
+        margin-top: 1.2em;
+    }
+
+    .card-container p{
         width: 100%;
-        max-height: 65vh;
-        padding: 60px;
-        display: grid;
-        grid-template-rows: 60px 70px 120px 100px;
-        grid-template-columns: auto;
-        grid-template-areas:
-            'img'
-            'h1'
-            'p'
-            'button'
     }
+    .card-container button{
+        margin-top: 5em
+    }
+
+    .card-container:first-child{
+        border-radius: 10px 0px 0 10px;
+    }
+
+    .card-container:last-child{
+        border-radius: 0 10px 10px 0px;
+    }
+ 
 }
