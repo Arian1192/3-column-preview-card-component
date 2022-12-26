@@ -76,7 +76,7 @@ body p {
 }
 
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 544px) {
     .card-container{
         width: 80vw;
         height: 400px;
@@ -99,7 +99,7 @@ body p {
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1022px) {
+@media screen and (min-width: 545px) and (max-width: 1022px) {
     .card-container{
         width: 50vw;
         height: 400px;
